@@ -5,7 +5,7 @@ import MenuCard from "../MenuCard";
 import Button from "../Button";
 
 const Restaurant = () => {
-  const [menuData, setMenuData] = useState(null);
+  const [menuData, setMenuData] = useState([]);
 
   useEffect(() => {
     getMenu()
@@ -23,7 +23,7 @@ const Restaurant = () => {
     menuData.map((data) => {
       const updatedItems = data.items.filter((curEle) => curEle.menuId === id);
       console.log("updatedItems>>>1", updatedItems);
-      setMenuData(updatedItems);
+      setMenuData([...updatedItems]);
     });
   };
 
