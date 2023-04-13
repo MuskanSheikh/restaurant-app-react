@@ -40,6 +40,7 @@ const Todo = () => {
       setInputData("");
     }
   };
+  
   const deleteItem = (id) => {
     const del = item.filter((cur) => {
         return cur.id !== id;
@@ -49,6 +50,7 @@ const Todo = () => {
   const removeAll = () => {
     setItem([]);
   }
+
   const editItem = (id) => {
     const edit = item.find((curr) => {
       return curr.id === id;
@@ -59,6 +61,7 @@ const Todo = () => {
       setToggleButton(true);
     }
   }
+
   useEffect(() => {
     localStorage.setItem("storedData",JSON.stringify(item))
   },[item])
