@@ -5,7 +5,7 @@ import Todo from "./Component/Basics/todo/todo";
 const App = () => {
   return (
     <div>
-      <Todo/>
+      <Restaurant/>
     </div>
   )
 }

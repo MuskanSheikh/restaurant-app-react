@@ -21,10 +21,13 @@ const Restaurant = () => {
     console.log("current clicked element id :", id);
 
     menuData.map((data) => {
-      const updatedItems = data.items.filter((curEle) => curEle.menuId === id);
-      console.log("updatedItems>>>1", updatedItems);
-      setMenuData([...updatedItems]);
+      let updatedItems = data.items.filter((curEle) => curEle.menuId === id);
+     
+      if(Array.isArray(updatedItems) && updatedItems.length > 0){
+        setMenuData([...updatedItems]);
+      }  
     });
+    console.log("updated var >>> ",menuData)
   };
 
   return (

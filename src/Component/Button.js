@@ -7,8 +7,8 @@ const Button = (props) => {
     <>
       <nav className="navbar">
         <div className="btn-group">
-          {(menu || []).map((current) => {
-            console.log("Current item id >>> ", current.title.id);
+          {menu.map((current) => {
+            console.log("Current item id >>> ", current);
             return (
               <button
                 className="btn-group__item"
